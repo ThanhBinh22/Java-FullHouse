@@ -1,0 +1,59 @@
+UCLN: 
+public static long gcd(long a, long b){
+    while(b!=0){
+        long r = a%b;
+        a=b;
+        b=r;
+    }
+    return a;
+
+BCNN:
+B1: tìm ước chung lớn nhất
+B2: tìm bội chung nhỏ nhất
+public static long gcd(long a, long b){
+    while(b!=0){
+        long r = a%b;
+        a=b;
+        b=r;
+    }
+    return a;
+public static long lcm (long a, long b){
+    return a/gcd(a,b)*b;
+}
+}
+
+Fibonacy: 
+public static void fibo(){
+    System.out.println("0 1");
+    long f0 = 0, f1 = 1;
+    for (int i = 3, i <= 93, i++){
+        long fn = f0 + f1;
+        System.out.println(fn);
+        f0 = f1;
+        f1 = fn;
+    }
+ 
+kiem tra:
+public static boolean fibo(long n){
+    if ( n == 0 || n ==1) return true;
+    long f0 = 0, f1 = 1;
+    for (int i = 3, i <= 93, i++){
+        long fn = f0 + f1;
+        if ( fn == n) return true;
+        f0 = f1;
+        f1 = fn;
+    }
+ return false;
+}
+phan tích thừa số nguyên tố:
+public static void pt(int n) {
+    for ( int i =2; i <= math.sqrt(n), i++){
+        if(n % i == 0) {
+            while(n % i == 0){
+                System.out.print(i + " ");
+                n /= i;
+            }
+        }
+    }
+    if ( n != 1) System.out.println(n);
+}
